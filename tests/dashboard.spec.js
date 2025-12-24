@@ -16,7 +16,7 @@ const EXPECTED_BOX_TITLES = [
   "K8s Pods",
   "EC2 Instances",
   "Pipeline Status",
-  "EzopsCluster[2025-12-23] Cluster",
+  "Ezops Cluster",
 ];
 
 // Helper function to generate timestamp string (YYYY-MM-DD-HH-MM-SS)

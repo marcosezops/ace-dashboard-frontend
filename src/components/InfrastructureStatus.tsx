@@ -137,7 +137,7 @@ export const InfrastructureStatus: React.FC = () => {
         status="healthy"
       />
       <StatusCard
-        title="EzopsCluster[2025-12-23] Cluster"
+        title="Ezops Cluster"
         icon={<Server className="h-4 w-4 text-muted-foreground" />}
         value="Running"
         status="healthy"
