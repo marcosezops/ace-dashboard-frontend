@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 11%; /* Darkest blue from ace.cloud */
+    --foreground: 214 32% 91%; /* Light text for contrast */
+    --card: 222 47% 13%;
+    --card-foreground: 214 32% 91%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 214 32% 91%;
+    --primary: 196 100% 50%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 214 32% 91%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 196 100% 50%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 196 100% 50%;
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border selection:bg-accent/20 selection:text-accent;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+    background: 
+      /* Graffiti-inspired layered gradients */
+      radial-gradient(circle at 20% 80%, rgba(255, 20, 147, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(0, 191, 255, 0.12) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, rgba(50, 205, 50, 0.1) 0%, transparent 50%),
+      /* Urban concrete texture overlay */
+      linear-gradient(135deg, 
+        rgba(15, 15, 15, 0.95) 0%, 
+        rgba(25, 25, 25, 0.92) 25%, 
+        rgba(35, 35, 35, 0.90) 50%, 
+        rgba(20, 20, 20, 0.93) 75%, 
+        rgba(10, 10, 10, 0.95) 100%
+      ),
+      /* Subtle spray paint texture */
+      repeating-linear-gradient(45deg, 
+        transparent, 
+        transparent 2px, 
+        rgba(255, 255, 255, 0.02) 2px, 
+        rgba(255, 255, 255, 0.02) 4px
+      );
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+
+  /* Add graffiti-style accent elements */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+      /* Neon spray effects */
+      radial-gradient(ellipse 80% 50% at 15% 25%, rgba(255, 0, 255, 0.08) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 40% at 85% 75%, rgba(0, 255, 127, 0.06) 0%, transparent 70%),
+      radial-gradient(ellipse 70% 30% at 50% 90%, rgba(255, 165, 0, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  /* Graffiti tag-style decorative elements */
+  body::after {
+    content: '';
+    position: fixed;
+    top: 10%;
+    right: 5%;
+    width: 150px;
+    height: 150px;
+    background: 
+      conic-gradient(from 0deg, 
+        transparent 0deg 60deg, 
+        rgba(255, 20, 147, 0.1) 60deg 120deg, 
+        transparent 120deg 180deg,
+        rgba(0, 191, 255, 0.1) 180deg 240deg,
+        transparent 240deg 300deg,
+        rgba(50, 205, 50, 0.1) 300deg 360deg
+      );
+    border-radius: 50%;
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: -1;
+    animation: graffitiFloat 20s ease-in-out infinite;
+  }
+
+  @keyframes graffitiFloat {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-10px) rotate(120deg); }
+    66% { transform: translateY(5px) rotate(240deg); }
+  }
+
+  .glass {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl;
+    background: linear-gradient(135deg, 
+      rgba(255, 255, 255, 0.1) 0%, 
+      rgba(255, 255, 255, 0.05) 50%, 
+      rgba(255, 255, 255, 0.08) 100%
+    );
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2),
+      0 0 20px rgba(255, 20, 147, 0.1);
+  }
+
+  /* Graffiti-style card enhancements */
+  .graffiti-card {
+    background: linear-gradient(145deg, 
+      rgba(255, 255, 255, 0.08) 0%, 
+      rgba(255, 255, 255, 0.03) 50%, 
+      rgba(255, 255, 255, 0.06) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      0 0 30px rgba(0, 191, 255, 0.08);
+  }
+
+  /* Urban-style button effects */
+  .graffiti-button {
+    background: linear-gradient(45deg, 
+      rgba(255, 20, 147, 0.8) 0%, 
+      rgba(0, 191, 255, 0.8) 50%, 
+      rgba(50, 205, 50, 0.8) 100%
+    );
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 
+      0 4px 15px rgba(255, 20, 147, 0.3),
+      0 0 20px rgba(0, 191, 255, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  .graffiti-button:hover {
+    box-shadow: 
+      0 6px 25px rgba(255, 20, 147, 0.5),
+      0 0 30px rgba(0, 191, 255, 0.4);
+    transform: translateY(-2px);
+  }
+}
