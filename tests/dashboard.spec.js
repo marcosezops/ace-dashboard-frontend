@@ -17,6 +17,7 @@ const EXPECTED_BOX_TITLES = [
   "EC2 Instances",
   "Pipeline Status",
   "Ezops Cluster",
+  "System Monitoring",
 ];
 
 // Helper function to generate timestamp string (YYYY-MM-DD-HH-MM-SS)

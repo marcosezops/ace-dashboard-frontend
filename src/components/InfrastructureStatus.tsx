@@ -143,6 +143,15 @@ export const InfrastructureStatus: React.FC = () => {
         status="healthy"
         data-testid="ezops-cluster-box"
       />
+      <StatusCard
+        title="System Monitoring"
+        icon={<Monitor className="h-4 w-4 text-muted-foreground" />}
+        value="Active"
+        status="healthy"
+        trend="up"
+        trendValue="All metrics OK"
+        data-testid="system-monitoring-box"
+      />
     </div>
   );
 };
