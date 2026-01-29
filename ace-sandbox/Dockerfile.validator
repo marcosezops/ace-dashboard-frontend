@@ -1,0 +1,20 @@
+FROM node:20-alpine
+
+# Install build essentials for some npm packages
+RUN apk add --no-cache bash git
+
+# Create work dir
+WORKDIR /app
+
+# Install validation tools globally
+RUN npm install -g \
+  typescript \
+  eslint \
+  prettier \
+  eslint-plugin-react \
+  eslint-plugin-react-hooks \
+  @typescript-eslint/parser \
+  @typescript-eslint/eslint-plugin
+
+# Default command: show versions
+CMD ["bash", "-c", "node -v && eslint -v && prettier -v && tsc -v"]

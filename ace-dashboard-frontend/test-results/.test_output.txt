@@ -1,0 +1,25 @@
+Unable to find image '975635808270.dkr.ecr.us-east-1.amazonaws.com/ace/base-images:playwright-v1.56.0-jammy' locally
+playwright-v1.56.0-jammy: Pulling from ace/base-images
+828c1365039a: Pulling fs layer
+4969c9987a34: Pulling fs layer
+cd042e4b2ae5: Pulling fs layer
+771eafc85f0e: Pulling fs layer
+771eafc85f0e: Download complete
+828c1365039a: Download complete
+cd042e4b2ae5: Download complete
+828c1365039a: Pull complete
+771eafc85f0e: Pull complete
+cd042e4b2ae5: Pull complete
+4969c9987a34: Download complete
+4969c9987a34: Pull complete
+Digest: sha256:8901203e4be3245885e0c0c58a3098d21a0892e17525bb32ce66ae37033434af
+Status: Downloaded newer image for 975635808270.dkr.ecr.us-east-1.amazonaws.com/ace/base-images:playwright-v1.56.0-jammy
+
+🎭 Running Playwright Tests...
+   Projects: regression, security, menu-validation
+   Workers: 4
+
+Error: Project(s) "regression", "security", "menu-validation" not found. Available projects: ""
+    at filterProjects (/work/node_modules/playwright/lib/runner/projectUtils.js:80:11)
+    at runTests (/work/node_modules/playwright/lib/program.js:217:42)
+    at async i.<anonymous> (/work/node_modules/playwright/lib/program.js:71:7)

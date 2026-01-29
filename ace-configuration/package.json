@@ -1,0 +1,1 @@
+{"name":"ace-configuration","version":"1.0.0","scripts":{"start:configuration":"echo Configuration service running && tail -f /dev/null"}}

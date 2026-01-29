@@ -1,0 +1,1 @@
+{"name":"ace-backend","version":"1.0.0","scripts":{"start":"echo Backend running && tail -f /dev/null"}}

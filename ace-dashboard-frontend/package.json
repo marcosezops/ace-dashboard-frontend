@@ -1,0 +1,1 @@
+{"name":"ace-frontend","version":"1.0.0","scripts":{"start":"echo Frontend running && tail -f /dev/null"},"dependencies":{"@playwright/test":"^1.56.0"}}
